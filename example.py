@@ -6,7 +6,7 @@ from itertools import islice
 import logging
 
 if __name__ == '__main__':
-    for r in [100000, 25000, 6000, 1250, 300]:
+    for r in [200000, 100000, 25000, 6000, 1250, 300, 100, 50, 20]:
         t1 = time.time()
         points = []
         with open('./proj_point_list.csv', 'r', encoding='utf-8') as f:
@@ -22,6 +22,8 @@ if __name__ == '__main__':
         recentBlueNoiseFilePath = './samplePoints-{0}-{1}-{2}.json'.format(r, len(samplePoints),
                                                                            len(samplePoints) / len(
                                                                                points))
+        print('samplePoints num', len(samplePoints))
+
         with open(recentBlueNoiseFilePath, 'w',
                   encoding='utf-8') as f:
             logging.info(str(r) + ' sampling over,' + str((time.time() - t1) / 60))
