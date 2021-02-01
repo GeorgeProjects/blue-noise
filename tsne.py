@@ -1,7 +1,7 @@
 import numpy as np
 from sklearn.manifold import TSNE
 
-from import_csv import read_csv_data, save_csv_data
+from process_csv import read_csv_data, save_csv_data
 
 if __name__ == '__main__':
     file_name = 'embeddings-results.csv'

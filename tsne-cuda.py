@@ -27,14 +27,14 @@ def proj(X):
 
 def main():
     # csv_name = 'lamost_sample.csv'
-    csv_name = 'test.csv'
+    csv_name = 'embeddings-results.csv'
 
     df = pd.read_csv(csv_name, header=None)
 
     arr = df.loc[:].to_numpy()
     standardize_arr = standardize(arr)
 
-    proj_res = proj(standardize_arr)
+    proj_res = {"Y": proj(standardize_arr).tolist()}
 
     # json_dir = 'lamost_sample.json'
     json_dir = 'proj_results.json'
