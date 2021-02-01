@@ -12,10 +12,10 @@ if __name__ == '__main__':
         with open('./proj_point_list.csv', 'r', encoding='utf-8') as f:
             csvF = csv.reader(f)
             for row in islice(csvF, 1, None):
-                index = row[0]
-                x = float(row[1])
-                y = float(row[2])
-                points.append({'index': index, 'x': x, 'y': y})
+                pID = row[0]
+                lat = float(row[1])
+                lng = float(row[2])
+                points.append({'id': pID, 'lat': lat, 'lng': lng})
 
         samplePoints = blueNoise(points, r)
 
