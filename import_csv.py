@@ -5,7 +5,6 @@ def get_dsv_data(file_name):
     with open(file_name, newline='') as f:
         reader = csv.reader(f)
         for row in reader:
-            print(row)
             data_item_list.append(row)
     return data_item_list
 
